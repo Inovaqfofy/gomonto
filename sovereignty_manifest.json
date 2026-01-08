@@ -1,0 +1,26 @@
+{
+  "version": "2.0",
+  "projectName": "gomonto",
+  "generatedAt": "2026-01-08T15:27:50.992Z",
+  "certification": {
+    "openSourceCompliance": false,
+    "portableCompliance": false,
+    "coolifyCompliance": true,
+    "bigTechDependency": 0
+  },
+  "audit": {
+    "score": 85,
+    "criticalIssues": 0,
+    "warnings": 0,
+    "owaspScore": 100,
+    "securityScore": 100
+  },
+  "statistics": {
+    "filesCount": 225,
+    "linesOfCode": 47338,
+    "testsGenerated": 20,
+    "routesConverted": 20
+  },
+  "signature": "ccaab8523bc4a7903d81649f1131397d37d5fafb848a7d8931d1ae0b76f45fe2",
+  "signedAt": "2026-01-08T15:27:50.996Z"
+}

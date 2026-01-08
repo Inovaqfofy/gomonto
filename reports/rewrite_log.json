@@ -1,0 +1,44 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-01-08T15:27:51.020Z",
+  "projectName": "gomonto",
+  "totalFilesProcessed": 225,
+  "totalFilesModified": 1,
+  "phases": {
+    "ingestion": {
+      "status": "completed",
+      "filesExtracted": 225
+    },
+    "proprietaryScan": {
+      "status": "completed",
+      "issuesFound": 0
+    },
+    "astAnalysis": {
+      "status": "completed",
+      "dependenciesAnalyzed": 77
+    },
+    "rewriting": {
+      "status": "completed",
+      "filesRewritten": 1
+    },
+    "securityPurification": {
+      "status": "completed",
+      "score": 90
+    },
+    "stabilization": {
+      "status": "completed",
+      "lintConfigsGenerated": 2
+    },
+    "packGeneration": {
+      "status": "completed",
+      "routesConverted": 20
+    },
+    "validation": {
+      "status": "completed",
+      "dockerValidated": true,
+      "testsGenerated": 177
+    }
+  },
+  "transformations": [],
+  "summary": "Pack de libération NCS v2.0 généré avec 20 routes backend, 157 composants testés"
+}

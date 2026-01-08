@@ -1,0 +1,48 @@
+{
+  "isValid": true,
+  "score": 85,
+  "checks": {
+    "dockerfile": {
+      "passed": true,
+      "issues": []
+    },
+    "dependencies": {
+      "passed": true,
+      "missing": []
+    },
+    "envVars": {
+      "passed": true,
+      "required": [
+        "VITE_SUPABASE_URL",
+        "VITE_SUPABASE_ANON_KEY",
+        "DATABASE_URL",
+        "JWT_SECRET"
+      ],
+      "missing": []
+    },
+    "ports": {
+      "passed": true,
+      "exposed": [
+        80,
+        3000
+      ]
+    },
+    "healthcheck": {
+      "passed": true,
+      "configured": true
+    },
+    "multiStage": {
+      "passed": true,
+      "stages": 2
+    },
+    "security": {
+      "passed": false,
+      "issues": [
+        "Potential hardcoded secret in src/components/dashboard/AdvancedPaymentSettings.tsx"
+      ]
+    }
+  },
+  "recommendations": [
+    "Review and fix all flagged issues before deployment"
+  ]
+}

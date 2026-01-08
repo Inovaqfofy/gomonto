@@ -1,0 +1,55 @@
+# GoMonto - Location de véhicules en Afrique de l'Ouest
+# https://gomonto.com
+
+# Sitemap
+Sitemap: https://gomonto.com/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Social Media Crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# General crawlers
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# Disallow private areas
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow static assets
+Allow: /logo.png
+Allow: /demo-vehicles/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.webp
+
+# Host
+Host: https://gomonto.com

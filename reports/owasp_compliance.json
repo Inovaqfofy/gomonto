@@ -1,0 +1,48 @@
+{
+  "score": 45,
+  "passed": false,
+  "issues": [
+    {
+      "category": "A03_Injection",
+      "severity": "critical",
+      "file": "src/components/FeaturedVehicles.tsx",
+      "description": "SQL Injection potentielle",
+      "fix": "Utilisez des requêtes paramétrées"
+    },
+    {
+      "category": "A03_Injection",
+      "severity": "critical",
+      "file": "src/components/SearchBar.tsx",
+      "description": "SQL Injection potentielle",
+      "fix": "Utilisez des requêtes paramétrées"
+    },
+    {
+      "category": "A07_IdentificationFailures",
+      "severity": "medium",
+      "file": "src/components/auth/AuthForm.tsx",
+      "description": "Mot de passe faible potentiel",
+      "fix": "Exigez des mots de passe forts"
+    },
+    {
+      "category": "A03_Injection",
+      "severity": "high",
+      "file": "src/components/dashboard/EnhancedReservations.tsx",
+      "description": "XSS potentiel via dangerouslySetInnerHTML",
+      "fix": "Sanitisez avec DOMPurify"
+    },
+    {
+      "category": "A03_Injection",
+      "severity": "high",
+      "file": "src/components/ui/chart.tsx",
+      "description": "XSS potentiel via dangerouslySetInnerHTML",
+      "fix": "Sanitisez avec DOMPurify"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "critical": 2,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+  }
+}

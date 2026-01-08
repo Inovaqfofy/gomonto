@@ -1,0 +1,25 @@
+{
+  "isSecure": true,
+  "score": 90,
+  "categories": {
+    "dangerousFunctions": [],
+    "suspiciousDNS": [],
+    "credentialLeaks": [],
+    "hiddenTelemetry": [
+      {
+        "severity": "medium",
+        "file": "src/components/ui/scroll-area.tsx",
+        "description": "Monitoring tiers",
+        "remediation": "Utilisez Glitchtip self-hosted"
+      },
+      {
+        "severity": "medium",
+        "file": "src/components/vehicles/VehicleFilters.tsx",
+        "description": "Monitoring tiers",
+        "remediation": "Utilisez Glitchtip self-hosted"
+      }
+    ],
+    "backdoors": []
+  },
+  "summary": "⚠️ 2 problème(s) de sécurité"
+}

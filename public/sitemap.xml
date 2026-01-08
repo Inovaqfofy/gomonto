@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - All languages -->
+  <url>
+    <loc>https://gomonto.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomonto.com/"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Vehicles page -->
+  <url>
+    <loc>https://gomonto.com/vehicles</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/vehicles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/vehicles"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/vehicles"/>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- How it works -->
+  <url>
+    <loc>https://gomonto.com/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/how-it-works"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Become Owner -->
+  <url>
+    <loc>https://gomonto.com/become-owner</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/become-owner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/become-owner"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/become-owner"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Owners page -->
+  <url>
+    <loc>https://gomonto.com/owners</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/owners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/owners"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/owners"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Fleet Enterprise -->
+  <url>
+    <loc>https://gomonto.com/fleet-enterprise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/fleet-enterprise"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/fleet-enterprise"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/fleet-enterprise"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Certified Drivers -->
+  <url>
+    <loc>https://gomonto.com/certified-drivers</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/certified-drivers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/certified-drivers"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/certified-drivers"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- About -->
+  <url>
+    <loc>https://gomonto.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Contact -->
+  <url>
+    <loc>https://gomonto.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Legal pages -->
+  <url>
+    <loc>https://gomonto.com/legal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Auth -->
+  <url>
+    <loc>https://gomonto.com/auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <!-- Credit Pricing -->
+  <url>
+    <loc>https://gomonto.com/credit-pricing</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://gomonto.com/credit-pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gomonto.com/en/credit-pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://gomonto.com/pt/credit-pricing"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

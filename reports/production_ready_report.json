@@ -1,0 +1,86 @@
+{
+  "isProductionReady": false,
+  "overallScore": 60,
+  "timestamp": "2026-01-08T15:27:51.023Z",
+  "projectName": "gomonto",
+  "checklist": {
+    "build": {
+      "passed": true,
+      "details": [
+        "✅ Script build présent",
+        "✅ Script start/preview présent",
+        "✅ 61 dépendances déclarées"
+      ],
+      "score": 100
+    },
+    "runtime": {
+      "passed": true,
+      "details": [
+        "✅ index.html présent",
+        "✅ Point d'entrée JS/TS détecté",
+        "✅ Configuration Vite présente",
+        "✅ Aucun import cassé détecté"
+      ],
+      "score": 100
+    },
+    "database": {
+      "passed": true,
+      "details": [
+        "ℹ️ Base de données non incluse"
+      ],
+      "score": 100
+    },
+    "api": {
+      "passed": true,
+      "details": [],
+      "score": 85
+    },
+    "security": {
+      "passed": true,
+      "details": [
+        "✅ Aucun secret codé en dur",
+        "✅ Aucun usage de eval()"
+      ],
+      "score": 90
+    },
+    "coolify": {
+      "passed": false,
+      "details": [],
+      "score": 20
+    },
+    "integrity": {
+      "passed": false,
+      "details": [
+        "❌ JSON invalide: tsconfig.app.json",
+        "❌ JSON invalide: tsconfig.node.json",
+        "✅ Aucun fichier vide",
+        "✅ Aucun fichier tronqué"
+      ],
+      "score": 70
+    },
+    "documentation": {
+      "passed": true,
+      "details": [
+        "✅ README présent"
+      ],
+      "score": 85
+    }
+  },
+  "criticalBlockers": [
+    "Dockerfile manquant"
+  ],
+  "warnings": [
+    "docker-compose.yml recommandé pour déploiement local"
+  ],
+  "recommendations": [
+    "Ajouter un endpoint /health pour les healthchecks",
+    "Créer .env.example pour documenter les variables",
+    "Ajouter un guide de déploiement"
+  ],
+  "certifications": {
+    "coolifyReady": false,
+    "dockerReady": false,
+    "sovereigntyCompliant": false,
+    "securityAudited": true
+  }
+}

@@ -1,0 +1,221 @@
+version: '3.8'
+
+# ═══════════════════════════════════════════════════════════════
+# gomonto - Stack de Production Souveraine
+# Généré par InoPay Liberation Pack v4.0
+# ═══════════════════════════════════════════════════════════════
+
+services:
+  # ─────────────────────────────────────────────────────────────
+  # FRONTEND - Application React avec Caddy (auto-SSL)
+  # ─────────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gomonto-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN:-localhost}
+      - VITE_API_URL=${VITE_API_URL:-http://localhost/api}
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    depends_on:
+      backend:
+        condition: service_healthy
+
+
+
+  # ─────────────────────────────────────────────────────────────
+  # BACKEND - API Express.js (converti depuis Edge Functions)
+  # ─────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: gomonto-backend
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - CORS_ORIGIN=${DOMAIN:-*}
+      - PORT=${PORT}
+      - NODE_ENV=${NODE_ENV}
+      - JWT_SECRET=${JWT_SECRET}
+      - LOVABLE_API_KEY=${LOVABLE_API_KEY}
+      - CINETPAY_API_KEY=${CINETPAY_API_KEY}
+      - CINETPAY_SITE_ID=${CINETPAY_SITE_ID}
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - FEDAPAY_SECRET_KEY=${FEDAPAY_SECRET_KEY}
+      - KKIAPAY_PUBLIC_KEY=${KKIAPAY_PUBLIC_KEY}
+      - KKIAPAY_PRIVATE_KEY=${KKIAPAY_PRIVATE_KEY}
+      - KKIAPAY_SECRET=${KKIAPAY_SECRET}
+      - KKIAPAY_SANDBOX=${KKIAPAY_SANDBOX}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - PROD=${PROD}
+      - langCode=${langCode}
+      - baseUrl=${baseUrl}
+      - currentLang=${currentLang}
+      - path=${path}
+      - image=${image}
+      - selectedCity=${selectedCity}
+      - today=${today}
+      - color=${color}
+      - hours=${hours}
+      - email=${email}
+      - countdown=${countdown}
+      - userId=${userId}
+      - documentType=${documentType}
+      - fileExt=${fileExt}
+      - progress=${progress}
+      - selectedMethod=${selectedMethod}
+      - totalDays=${totalDays}
+      - reservationId=${reservationId}
+      - reportType=${reportType}
+      - photoType=${photoType}
+      - vin=${vin}
+      - brand=${brand}
+      - model=${model}
+      - year=${year}
+      - vehicleId=${vehicleId}
+      - ext=${ext}
+      - name=${name}
+      - index=${index}
+      - methodId=${methodId}
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - fileName=${fileName}
+      - daysRemaining=${daysRemaining}
+      - iconColor=${iconColor}
+      - labelColor=${labelColor}
+      - priorityColor=${priorityColor}
+      - anomalyType=${anomalyType}
+      - anomalyDescription=${anomalyDescription}
+      - renterName=${renterName}
+      - connectionFee=${connectionFee}
+      - rejectionReason=${rejectionReason}
+      - field=${field}
+      - error=${error}
+      - type=${type}
+      - shortCode=${shortCode}
+      - conversationId=${conversationId}
+      - currentUserId=${currentUserId}
+      - searchTerm=${searchTerm}
+      - targetUserId=${targetUserId}
+      - code=${code}
+      - discountPercentage=${discountPercentage}
+      - vehicleName=${vehicleName}
+      - number=${number}
+      - latitude=${latitude}
+      - longitude=${longitude}
+      - level=${level}
+      - prefix=${prefix}
+      - key=${key}
+      - formDescriptionId=${formDescriptionId}
+      - formMessageId=${formMessageId}
+      - SIDEBAR_COOKIE_NAME=${SIDEBAR_COOKIE_NAME}
+      - openState=${openState}
+      - SIDEBAR_COOKIE_MAX_AGE=${SIDEBAR_COOKIE_MAX_AGE}
+      - lang=${lang}
+      - currency=${currency}
+      - formattedNumber=${formattedNumber}
+      - BASE_URL=${BASE_URL}
+      - params=${params}
+      - displayName=${displayName}
+      - ownerName=${ownerName}
+      - supabaseUrl=${supabaseUrl}
+      - todayStr=${todayStr}
+      - sevenDaysStr=${sevenDaysStr}
+      - licensePlate=${licensePlate}
+      - reportTypeLabel=${reportTypeLabel}
+      - reportDate=${reportDate}
+      - contractDate=${contractDate}
+      - reservation_id=${reservation_id}
+      - startDate=${startDate}
+      - endDate=${endDate}
+      - sync_id=${sync_id}
+      - fedapaySecretKey=${fedapaySecretKey}
+      - transactionId=${transactionId}
+      - renter_id=${renter_id}
+      - expirySeconds=${expirySeconds}
+      - expectedSignature=${expectedSignature}
+      - status=${status}
+      - end_date=${end_date}
+      - start_date=${start_date}
+      - businessName=${businessName}
+      - credit_purchase_id=${credit_purchase_id}
+      - action=${action}
+      - currentSpeed=${currentSpeed}
+      - sessionId=${sessionId}
+      - newScore=${newScore}
+      - behavior=${behavior}
+      - otp=${otp}
+      - amount=${amount}
+      - serviceFee=${serviceFee}
+      - refundAmount=${refundAmount}
+      - capturedAmt=${capturedAmt}
+      - refundAmt=${refundAmt}
+      - remainingAttempts=${remainingAttempts}
+      - VITE_SUPABASE_PROJECT_ID=${VITE_SUPABASE_PROJECT_ID}
+      - VITE_SUPABASE_PUBLISHABLE_KEY=${VITE_SUPABASE_PUBLISHABLE_KEY}
+
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+
+
+
+
+  # ─────────────────────────────────────────────────────────────
+  # WATCHTOWER - Mise à jour automatique des containers
+  # ─────────────────────────────────────────────────────────────
+  watchtower:
+    image: containrrr/watchtower
+    container_name: gomonto-watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=86400  # Vérifie toutes les 24h
+      - WATCHTOWER_INCLUDE_STOPPED=false
+    networks:
+      - app-network
+
+# ═══════════════════════════════════════════════════════════════
+# VOLUMES PERSISTANTS
+# ═══════════════════════════════════════════════════════════════
+volumes:
+  caddy_data:
+  caddy_config:
+
+
+# ═══════════════════════════════════════════════════════════════
+# RÉSEAU
+# ═══════════════════════════════════════════════════════════════
+networks:
+  app-network:
+    driver: bridge
